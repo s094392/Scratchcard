@@ -1,15 +1,18 @@
+.container {
+    height: 100%;
+}
 .sc__inner {
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 80%;
  }
  .sc__wrapper {
     display: block;
     width: 100%;
-    height: 300px;
-    max-width: 300px;
+    height: 80%;
+    max-width: 100%;
     margin: 0 auto;
     border: 5px solid white;
  }
@@ -17,8 +20,8 @@
  .sc__container {
     position: relative;
     overflow: hidden;
-    height: 300px;
-    max-width: 300px;
+    height: 100%;
+    max-width: 100%;
  }
  
  .sc__container > img {
@@ -35,13 +38,4 @@
     left: 0;
     width: 100%;
     height: auto;
- }
- 
- .sc__infos {
-    text-align: center;
-    height: 40px;
-    line-height: 40px;
-    margin-top: 5px;
-    font-weight: bold;
-    font-size: 18px;
  }

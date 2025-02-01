@@ -1,25 +1,20 @@
 const scContainer = document.getElementById('js--sc--container')
-const scInfos = document.querySelector('.sc__infos');
 const sc = new ScratchCard('#js--sc--container', {
-  scratchType: SCRATCH_TYPE.CIRCLE,
+  scratchType: SCRATCH_TYPE.LINE,
   containerWidth: scContainer.offsetWidth,
-  containerHeight: 300,
+  containerHeight: scContainer.offsetHeight,
   imageForwardSrc: 'images/scratchcard.jpg',
   imageBackgroundSrc: 'images/background.jpg',
   htmlBackground: '',
-  clearZoneRadius: 20,
+  clearZoneRadius: scContainer.offsetWidth / 15,
   nPoints: 0,
   pointSize: 0,
   callback: function () {
-    alert('Now the window will reload !')
   }
 })
 
 sc.init().then(() => {
   sc.canvas.addEventListener('scratch.move', () => {
-    let percent = sc.getPercent().toFixed(0);
-    scInfos.innerHTML = percent + '%';
-    console.log(percent)
   })
 }).catch((error) => {
   alert(error.message);
