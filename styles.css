@@ -1,20 +1,33 @@
-.container {
-    height: 100%;
+body {
+    margin: 0;
+    background-color: #ad0504
 }
-.sc__inner {
+
+.container {
     position: relative;
+}
+
+.foreground_image {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    pointer-events:none;
+}
+
+.sc__inner {
     top: 0;
     left: 0;
     width: 100%;
     height: 80%;
  }
+
  .sc__wrapper {
+    position: absolute;
     display: block;
     width: 100%;
     height: 80%;
     max-width: 100%;
     margin: 0 auto;
-    border: 5px solid white;
  }
  
  .sc__container {
@@ -38,4 +51,12 @@
     left: 0;
     width: 100%;
     height: auto;
+ }
+
+ .button_container {
+   display: block;
+ }
+
+ .button_img {
+    width: 30%;
  }
