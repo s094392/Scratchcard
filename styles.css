@@ -18,14 +18,14 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 80%;
+    height: 90%;
  }
 
  .sc__wrapper {
     position: absolute;
     display: block;
     width: 100%;
-    height: 80%;
+    height: 90%;
     max-width: 100%;
     margin: 0 auto;
  }
