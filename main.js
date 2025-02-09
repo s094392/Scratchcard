@@ -8,8 +8,8 @@ const timeClickEventListener = () => {
 }
 var result;
 function hasResult(result) {
-  const imageFront = `images/cards/${result}.png`
-  const imageBackground = `images/cards/${result}-1.png`
+  const imageFront = `images/cards/${result}.jpg`
+  const imageBackground = `images/cards/${result}-1.jpg`
   const card = document.getElementById('card')
   const content = document.getElementsByClassName('content')[0]
     card.style.top = foregroundImage.offsetHeight / 2.55 + "px"
@@ -52,7 +52,7 @@ if (urlParams.has('card')) {
   }
 } else {
   result = images[Math.floor(Math.random() * images.length)];
-  const imageFront = `images/cards/${result}.png`
+  const imageFront = `images/cards/${result}.jpg`
   
   const scContainer = document.getElementById('js--sc--container')
   const scWrapper = document.getElementsByClassName('sc__wrapper')[0]
