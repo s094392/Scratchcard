@@ -31,6 +31,7 @@ function hasResult(result) {
     backImg.src = imageBackground
     const cover = document.getElementById('cover')
     cover.style.display = 'block'
+    cover.style.height = document.documentElement.scrollHeight
     timeButton.removeEventListener('click', timeClickEventListener)
     timeButton.src = "images/share.png"
     timeButton.addEventListener('click', () => {
