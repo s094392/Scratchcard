@@ -35,15 +35,8 @@ function hasResult(result) {
     timeButton.removeEventListener('click', timeClickEventListener)
     timeButton.src = "images/share.png"
     timeButton.addEventListener('click', () => {
-      if (navigator.share) {
-        navigator.share({
-          title: '新莊靈糧堂春節經文刮刮卡',
-          text: '快來看看我刮到的春節經文刮刮卡！',
-          url: window.location.href.split("?")[0] + "?card=" + result,
-        })
-          .then(() => console.log('成功！'))
-          .catch((error) => console.log('發生錯誤', error));
-      }
+      window.location = "https://social-plugins.line.me/lineit/share?url=" + window.location.href.split("?")[0] + "?card=" + result
+
     })
 }
 if (urlParams.has('card')) {
@@ -71,7 +64,6 @@ if (urlParams.has('card')) {
       pointSize: 0,
       callback: function () {
         hasResult(result)
-        
       }
     })
   
@@ -95,13 +87,5 @@ const againButton = document.getElementById('again_button')
 
 const shardButton = document.getElementById('share_button')
 shardButton.addEventListener('click', () => {
-  if (navigator.share) {
-    navigator.share({
-      title: '新莊靈糧堂春節經文刮刮卡',
-      text: '新莊靈糧堂春節經文刮刮卡',
-      url: document.URL,
-    })
-      .then(() => console.log('成功！'))
-      .catch((error) => console.log('發生錯誤', error));
-  }
+  window.location = "https://social-plugins.line.me/lineit/share?url=" + window.location.href.split("?")[0] 
 })
